@@ -43,8 +43,8 @@
           aria-haspopup="true" aria-expanded="false">Categories</a>
         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
           {% for category in categories %}
-            <a class="dropdown-item" href="{{ category.pk }}">{{ category.name }}</a>
-          {% endfor %}
+            <a class="dropdown-item" href="{% url 'mainpage:bycategory' pk=category.id %}">{{ category.name }}</a>
+            {% endfor %}
         </div>
       </li>
 
@@ -61,41 +61,41 @@
 
     </section>
 
-
+        <section style="background-color:#266150;padding: 2%;">
+            <h1 style="color: White">{{ shop.name}}</h1>
+        </section>
 
 <section class="middle">
 <div class="cards">
-        {% for shop in shops.object_list %}
+        {% for product in products %}
             <div class="card mb-3" style="width: 18rem;height:25rem;">
-                <div class="image-div" style="width: 18rem; height: 50%;">
-                    <img class="card-img" src="{{ shop.image.url }}" style="height: 100%; width: 100%;" alt="Card image cap"/>
+                <div class="image-div" style="width: 18rem; height: 60%;">
+                    <img class="card-img" src="{{ product.image.url }}" style="height: 100%; width: 100%;" alt="Card image cap"/>
     </div>
   <div class="card-body">
-    <h5 class="card-title">{{ shop.name}}</h5>
-    <p class="card-text"><i class="fas fa-phone-square-alt"></i>    {{ shop.contacts}}</p>
-    <p class="card-text" ><i class="fas fa-map-marker-alt"></i>   {{ shop.address}}</p>
-    <a href="{% url 'mainpage:catalog' pk=shop.id %}" class="btn btn-primary" style="background-color: #266150;">Go somewhere</a>
+    <h5 class="card-title">{{ product.name}}</h5>
+    <p class="card-text">Price: {{ product.price}}</p>
   </div>
 </div>
 {% endfor %}
 </div>
  </section>
 
-<section style="background-color: #FDF8F5;" class="navigation">
+<section class="navigation">
 <nav aria-label="...">
-  <ul class="pagination" >
+  <ul class="pagination">
     <li class="page-item {% if not prev_url %}disabled{% endif %}">
       <a class="page-link" href="{{ prev_url }}" tabindex="-1">Previous</a>
     </li>
 
 
 
-      {% for n in shops.paginator.page_range %}
-          {% if shops.number == n %}
+      {% for n in products.paginator.page_range %}
+          {% if products.number == n %}
                 <li class="page-item active">
-                    <a class="page-link" style="background-color: #266150;" href="?page={{ n }}">{{n}}<span class="sr-only">(current)</span></a>
+                    <a class="page-link" href="?page={{ n }}" style="background-color: #266150;">{{n}}<span class="sr-only">(current)</span></a>
                 </li>
-          {% elif n > shops.number|add:-3 and n < shops.number|add:3 %}
+          {% elif n > products.number|add:-3 and n < products.number|add:3 %}
                 <li class="page-item"><a class="page-link" href="?page={{ n }}">{{n}}</a></li>
           {% endif %}
       {% endfor %}
@@ -105,6 +105,7 @@
   </ul>
 </nav>
 </section>
+
 
 
 <div class="mt-5 pt-5 pb-5 footer" style="background-color: #266150;">
@@ -134,9 +135,8 @@
   </div>
 </div>
 </div>
-
-</section>
-<p style="background-color: #FDF8F5;">© 2020 - 2020 SearchShop.com - online service to facilitate the process of shopping. The rights to text and other materials posted on the site are protected by law.</p>
+    <section>
+<p>© 2020 - 2020 Bishkek.com - official website of Bishkek city and event promotion service. The rights to text and other materials posted on the site are protected by law.</p>
 </section>
 
     </div>

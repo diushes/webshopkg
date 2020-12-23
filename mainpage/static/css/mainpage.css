@@ -6,7 +6,9 @@
 }
 
 .content {
-	background-color: white;
+
+	background-color: #FDF8F5;
+
 }
 
 .middle {
@@ -14,27 +16,12 @@
 }
 
 .cards{
-	max-width: 100%;
 	padding: 4%;
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     grid-column-gap: 2%;
 
 }
-
-.image-div{
-	background-color: aqua;
-	width: 100%;
-	height:60%;
-
-
-}
-.card-img {
-	width: 100%;
-	height:100%;
-}
-
-
 
 
 .navigation{
@@ -43,7 +30,7 @@
 
 .bottom{
 	width: 100%;
-	background-color: black;
+	background-color: #266150;
 }
 
 .bottom-content{
