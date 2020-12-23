@@ -26,4 +26,4 @@ SearchShop
 # Screenshots
 ![image](Screenshots/topscreen.png)
 ![image](Screenshots/middlescreen.png)
-![image](Screenshots/Bottom.png)
+![image](Screenshots/BottomScreen.png)
