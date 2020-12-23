@@ -11,6 +11,8 @@ SearchShop
 # Link to YOUTUBE video
 https://youtu.be/noqdLC3ggn4
 
+# Link to the feedbacks
+https://docs.google.com/document/d/1qLszwAyMPI6UVOR_ikVcJD4JAiSBaANKGU6kFGWTD_U/edit?usp=sharing
 
 # Screenshots
 ![image](Screenshots/topscreen.png)
