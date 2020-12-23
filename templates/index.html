@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebShop.kg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/ea8d70caf1.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg">
+    <div class="content">
+    <section class="top">
+
+        <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-4">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand"  href="{% url "mainpage:shop_list"%}" style="color: #266150;font-family: 'Bebas Neue', cursive;padding: 5%;"href="#">SearchShop</a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+      class="navbar-toggler-icon"></span></button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url "mainpage:shop_list"%}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+    </ul>
+    <!-- Search form -->
+    <form class="form-inline" action="{% url "mainpage:shop_list" %}">
+      <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="search">
+    </form>
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+
+    </section>
+
+
+
+<section class="middle">
+<div class="cards">
+{% for shop in shops.object_list %}
+    <div class="card mb-3" style="width: 18rem;">
+    <div class="image-div">
+  <img class="card-img" src="{{ shop.image.url }}" alt="Card image cap"/>
+    </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ shop.name}}</h5>
+    <p class="card-text">{{ shop.contacts}}</p>
+    <p class="card-text">{{ shop.address}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+{% endfor %}
+</div>
+ </section>
+
+<section class="navigation">
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item {% if not prev_url %}disabled{% endif %}">
+      <a class="page-link" href="{{ prev_url }}" tabindex="-1">Previous</a>
+    </li>
+
+
+
+      {% for n in shops.paginator.page_range %}
+          {% if shops.number == n %}
+                <li class="page-item active">
+                    <a class="page-link" href="?page={{ n }}">{{n}}<span class="sr-only">(current)</span></a>
+                </li>
+          {% elif n > shops.number|add:-3 and n < shops.number|add:3 %}
+                <li class="page-item"><a class="page-link" href="?page={{ n }}">{{n}}</a></li>
+          {% endif %}
+      {% endfor %}
+    <li class="page-item {% if not next_url %}disabled{% endif %}">
+      <a class="page-link" href="{{ next_url }}" tabindex="-1">Next</a>
+    </li>
+  </ul>
+</nav>
+</section>
+
+
+
+<section class="bottom">
+<div class="bottom-content">
+   <ul style="font-size:30px; color: white">About Us</ul>
+   <ul style="color: white">Contacts</ul>
+   <ul style="color: white">Location</ul>
+   <ul style="color: white">Work schedule</ul>
+</div>
+
+
+</section>
+<p>© 2020 - 2020 Bishkek.com - official website of Bishkek city and event promotion service. The rights to text and other materials posted on the site are protected by law.</p>
+</section>
+
+    </div>
+    </div>
+    </div>
+
+
+
+
+</body>
+</html>
