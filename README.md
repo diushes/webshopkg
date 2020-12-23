@@ -8,13 +8,13 @@ SearchShop
 # Description
 ### A simple webisite designed to provide full information about shops in our city and their catalogs with available products and their photos.
 
-# Some Features:
-## 1) Adaptive
-![image](Screenshots/adaptive.png)
-## 2) Filtration of shops by categories
-![image](Screenshots/Categories.png)
-## 3) Simple and convenient search system
-![image](Screenshots/search.png)
+
+
+# Screenshots
+![image](Screenshots/topscreen.png)
+![image](Screenshots/middlescreen.png)
+![image](Screenshots/BottomScreen.png)
+
 
 # Tools 
 ### Pycharm 
@@ -31,7 +31,12 @@ SearchShop
 ##### email: aiana.diushenalieva@iaau.edu.kg
 ##### phone: +996999251530
 
-# Screenshots
-![image](Screenshots/topscreen.png)
-![image](Screenshots/middlescreen.png)
-![image](Screenshots/BottomScreen.png)
+
+
+# Some Features:
+## 1) Adaptive
+![image](Screenshots/adaptive.png)
+## 2) Filtration of shops by categories
+![image](Screenshots/Categories.png)
+## 3) Simple and convenient search system
+![image](Screenshots/search.png)
