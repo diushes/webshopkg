@@ -6,7 +6,15 @@ SearchShop
 
 
 # Description
-### A simple webiste designed to provide full information about shops in our city and their catalogs with available products and their photos.
+### A simple webisite designed to provide full information about shops in our city and their catalogs with available products and their photos.
+
+# Some Features:
+## 1) Adaptive
+![image](Screenshots/adaptive.png)
+## 2) Filtration of shops by categories
+![image](Screenshots/Categories.png)
+## 3) Simple and convenient search system
+![image](Screenshots/search.png)
 
 # Tools 
 ### Pycharm 
