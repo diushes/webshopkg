@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+
 from pathlib import Path
 import os
 
@@ -84,12 +85,12 @@ WSGI_APPLICATION = "webshop.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "postgres",
-        "HOST": "127.0.0.1",
-        "PORT": "5433",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "d3hku2bc0qtpqb",
+        "USER": "zwdqejaksuasnr",
+        "PASSWORD": "87b7649118ca2bb9a480f82b3e44aac7d34facc3f15a641a3a40450218c80546",
+        "HOST": "ec2-52-3-60-53.compute-1.amazonaws.com",
+        "PORT": "5432",
     }
 }
 
