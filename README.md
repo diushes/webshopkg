@@ -8,6 +8,9 @@ SearchShop
 # Description
 ### A simple webisite designed to provide full information about shops in our city and their catalogs with available products and their photos.
 
+# Link to heroku
+https://webshopkg.herokuapp.com/
+
 # Link to YOUTUBE video
 https://youtu.be/noqdLC3ggn4
 
