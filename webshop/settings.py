@@ -26,7 +26,7 @@ SECRET_KEY = "3gdn4^nd5*7f#aatcqv&ntld$d-ak#@6+68(y0l6w#30h6!j93"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -130,4 +130,4 @@ STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 
-#https://webshopkg.herokuapp.com/ | https://git.heroku.com/webshopkg.git
+# https://webshopkg.herokuapp.com/ | https://git.heroku.com/webshopkg.git
