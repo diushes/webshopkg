@@ -128,3 +128,6 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+
+#https://webshopkg.herokuapp.com/ | https://git.heroku.com/webshopkg.git
